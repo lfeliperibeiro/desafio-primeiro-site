@@ -16,6 +16,6 @@ document.querySelector(".close-modal").addEventListener("click", () => {
   modalOverlay.classList.remove("active");
 });
 
-document.querySelector('.maximize-modal').addEventListener('click', () =>{
-    modal.classList.add('max')
-})
+document.querySelector(".maximize-modal").addEventListener("click", () => {
+  modal.classList.toggle("max");
+});
