@@ -1,27 +1,27 @@
 {% extends 'layout.njk' %}
 
 {% block head %}
-  <title>Rocketseat | Sobre</title>
+  <title>{{about.title}}
+    | Sobre</title>
 {% endblock head %}
 
 {% block content %}
   <div class="content">
     <div class="about">
-      <img src="https://rocketseat.com.br/static/images/logo-rocketseat.svg" alt=""/>
-      <h1>Rocketseat</h1>
+      <img src="{{about.image}}" alt="{{about.title}}"/>
+      <h1>{{ about.title }}</h1>
     </div>
 
     <div class="tech">
       <div class="tech-content">
-        <img src="https://rocketseat.com.br/static/images/update/trofeu-home.svg" alt=""/>
+        <img src="{{about.imagetech}}" alt=""/>
         <ul>
-          <li>JavaScript</li>
-          <li>Node.js</li>
-          <li>React</li>
-          <li>React-Native</li>
+          {% for ul in about.uls %}
+            <li>{{ul.name}}</li>
+          {% endfor %}
         </ul>
         <p>
-          As melhores tecnologias em programação, direto ao ponto e do jeito certo.
+          {{about.description}}
         </p>
       </div>
     </div>

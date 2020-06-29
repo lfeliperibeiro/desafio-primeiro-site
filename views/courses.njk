@@ -11,62 +11,26 @@
     </h1>
   </div>
   <section class="cards">
-    <div class="card" id="starter">
-      <div class="span-starter">
-        <span>01</span>
-      </div>
-      <div class="card-content">
-        <img src="./img/starter.svg" alt="starter"/>
-        <h1>
-          <span class="color-starter">Torne-se um programador desejado</span>
-          com esses cursos gratuitos
-        </h1>
-        <div class="card-info">
-          <p class="card-modulo">
-            10 módulos
-          </p>
-          <p class="card-price">Gratuito</p>
+    {% for item in items %}
+      <div class="card" id="{{item.id}}">
+        <div class="span-starter">
+          <span>{{item.num}}</span>
+        </div>
+        <div class="card-content">
+          <img src="./img/{{item.id}}.svg" alt="{{item.id}}"/>
+          <h1>
+            {{item.description}}
+          </h1>
+          <div class="card-info">
+            <p class="card-modulo">
+              {{item.role}}
+            </p>
+            <p class="card-price">{{item.price}}</p>
+          </div>
         </div>
       </div>
-    </div>
+    {% endfor %}
 
-    <div class="card" id="launchbase">
-      <div class="span-launch">
-        <span>02</span>
-      </div>
-      <div class="card-content">
-        <img src="./img/launchbase.svg" alt="launchbase"/>
-        <h1>
-          <span class="color-launch">Domine programação do zero</span>
-          e tenha acesso às melhores opertunindades do mercado
-        </h1>
-        <div class="card-info">
-          <p class="card-modulo">
-            10 módulos
-          </p>
-          <p class="card-price">Pago</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card" id="gostack">
-      <div class="span-go">
-        <span>01</span>
-      </div>
-      <div class="card-content">
-        <img src="./img/gostack.svg" alt="gostack"/>
-        <h1>
-          <span class="color-go">Treinamento imersivo</span>
-          nas tecnologias mais modernas de desenvolvimento web e mobile
-        </h1>
-        <div class="card-info">
-          <p class="card-modulo">
-            10 módulos
-          </p>
-          <p class="card-price">Pago</p>
-        </div>
-      </div>
-    </div>
   </section>
 
   <div class="modal-overlay">
