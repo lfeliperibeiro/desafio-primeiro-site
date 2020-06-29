@@ -1,0 +1,91 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+  <title>Rocketseat | Cursos</title>
+{% endblock head %}
+
+{% block content %}
+  <div class="title">
+    <h1>
+      Conteúdos
+    </h1>
+  </div>
+  <section class="cards">
+    <div class="card" id="starter">
+      <div class="span-starter">
+        <span>01</span>
+      </div>
+      <div class="card-content">
+        <img src="./img/starter.svg" alt="starter"/>
+        <h1>
+          <span class="color-starter">Torne-se um programador desejado</span>
+          com esses cursos gratuitos
+        </h1>
+        <div class="card-info">
+          <p class="card-modulo">
+            10 módulos
+          </p>
+          <p class="card-price">Gratuito</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="launchbase">
+      <div class="span-launch">
+        <span>02</span>
+      </div>
+      <div class="card-content">
+        <img src="./img/launchbase.svg" alt="launchbase"/>
+        <h1>
+          <span class="color-launch">Domine programação do zero</span>
+          e tenha acesso às melhores opertunindades do mercado
+        </h1>
+        <div class="card-info">
+          <p class="card-modulo">
+            10 módulos
+          </p>
+          <p class="card-price">Pago</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" id="gostack">
+      <div class="span-go">
+        <span>01</span>
+      </div>
+      <div class="card-content">
+        <img src="./img/gostack.svg" alt="gostack"/>
+        <h1>
+          <span class="color-go">Treinamento imersivo</span>
+          nas tecnologias mais modernas de desenvolvimento web e mobile
+        </h1>
+        <div class="card-info">
+          <p class="card-modulo">
+            10 módulos
+          </p>
+          <p class="card-price">Pago</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-overlay">
+    <div class="modal">
+      <div class="modal-content">
+        <div class="close-modal">
+          <a>
+            <i class="material-icons">close</i>
+          </a>
+        </div>
+        <div class="maximize-modal">
+          <a>
+            <i class="material-icons">add</i>
+          </a>
+        </div>
+
+        <iframe src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+{% endblock content %}
