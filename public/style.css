@@ -105,8 +105,8 @@ footer {
   background-color: var(--blue-color);
   padding: 32px;
   text-align: center;
-  position: absolute;
-  width: 95%;
+  position: fixed;
+  width: 100%;
   bottom: 0;
 }
 
@@ -281,11 +281,20 @@ div.image-error img {
   display: flex;
 }
 
-.not-found-text h1{
+.not-found-text h1 {
   margin: 0 auto;
   max-width: 940px;
   color: white;
   font-size: 22px;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.courses {
+  margin: 0 auto;
+}
+
+.course-content iframe {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }

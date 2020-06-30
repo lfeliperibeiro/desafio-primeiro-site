@@ -6,6 +6,7 @@ const data = require("./data");
 nunjucks.configure("views", {
   express: server,
   autoescape: false,
+  noCache: true,
 });
 
 server.set("view engine", "njk");
@@ -32,6 +33,18 @@ server.get("/", (req, res) => {
 
 server.get("/courses", (req, res) => {
   return res.render("courses", { items: data });
+});
+
+server.get("/course", (req, res) => {
+  const id = req.query.id;
+  const course = data.find((course) => {
+    return course.id == id;
+  });
+
+  if (!course.id) {
+    return res.render("not-found");
+  }
+  return res.render("course", { item: course });
 });
 
 server.use((req, res) => {
